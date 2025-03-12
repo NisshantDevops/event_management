@@ -41,7 +41,7 @@ const Login = () => {
         const response = await login(values.email, values.password);
     
         if (StatusMessage(response.StatusCodes)) {
-          toast.success("Login successful!");
+          toast.success(response.message);
     
           localStorage.setItem("token", response.token);
     
@@ -50,16 +50,22 @@ const Login = () => {
             navigate("/dashboard");
           }, 1500);
         } else {
-          toast.error(response?.message || "Login failed!");
+          if (response?.message) {
+            toast.error(response.message);
+          }
           setLoading(false);
         }
       } catch (error) {
         setLoading(false);
         setErrorMsg(error.message);
-    
+      
         console.error("Login Error:", error.message);
-        toast.error(error?.message || "Something went wrong!");
+      
+        if (error?.message) {
+          toast.error(error.message);
+        }
       }
+      
     }    
 
   });
