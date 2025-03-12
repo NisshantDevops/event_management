@@ -36,27 +36,27 @@ const Login = () => {
       setErrorMsg("");
     
       try {
-        // Call login API from LoginApi.js
+       
         const response = await login(values.email, values.password);
         console.log("Login Response:", response);
     
-        // Check HTTP status codes for success
+       
         if ([200, 201, 202].includes(response.status)) {
           toast.success("Login successful!", {
             position: "top-right",
             autoClose: 3000,
           });
     
-          // Store token in local storage
+          
           localStorage.setItem("token", response.token);
     
-          // Redirect to dashboard
+         
           setTimeout(() => {
             setLoading(false);
             navigate("/dashboard");
           }, 1500);
         } else {
-          // Log error message to console if response is not successful
+          
           console.error("Login Failed:", response.message);
           toast.error(response.message || "Login failed!", {
             position: "top-right",
@@ -68,7 +68,7 @@ const Login = () => {
         setLoading(false);
         setErrorMsg(error.message);
     
-        // Log error message for debugging
+        
         console.error("Login Error:", error.message);
         toast.error(error.message || "Something went wrong!", {
           position: "top-right",

@@ -7,7 +7,7 @@ const ApiService = {
 
       const headers = {
         "Content-Type": "application/json",
-        ...(token && { Authorization: `Bearer ${token}` }), // Attach token if available
+        ...(token && { Authorization: `Bearer ${token}` }), 
       };
 
       const options = {
