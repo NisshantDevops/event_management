@@ -5,13 +5,13 @@
 .swiper-button-next, .swiper-button-prev {
     height: 32px !important;
     width: 32px !important;
-    background-color: rgba($primary, 0.2);
+    background-color: rgba($primary, 0.2) !important;
     backdrop-filter: blur(2px);
     border-radius: 8px;
     &::after {
         font-family: remixicon !important;
         font-size: 28px !important;
-        color: rgba($primary, 1);
+        color: rgba($primary, 1) !important;
         transition: all 0.3s ease;
     }
 }
@@ -32,9 +32,9 @@
     height: 5px !important;
     background-color: $white !important;
     border-radius: 50px !important;
-    box-shadow: $element-shadow;
+    box-shadow: $element-shadow !important;
     .swiper-pagination-bullet-active{
-        opacity: 1;
+        opacity: 1 !important;
     }
 }
 
@@ -43,7 +43,7 @@
         width: 8px !important;
         height: 8px !important;
         background-color: $white !important;
-        opacity: 0.5;
+        opacity: 0.5 !important;
         transition: all 0.5s ease;
         &.swiper-pagination-bullet-active{
             opacity: 1;
@@ -106,7 +106,7 @@
     }
     &.pagination-custom{
         .swiper-pagination-bullet { 
-            color: $white;
+            color: $white !important;
             &.swiper-pagination-bullet-active{
                 opacity: 1;
             }

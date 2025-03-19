@@ -9,7 +9,8 @@ import ParticlesAuth from "../../pages/AuthenticationInner/ParticlesAuth";
 import BaseButton from "../../Components/Base/Button";
 import BaseInput from "../../Components/Base/Input";
 import { StatusMessage, Texts } from "../../Components/Constant/Common";
-import { sendForgotPasswordRequest, setUpdatePassword  } from "../../Api/sendForgotPasswordRequest";
+import {  setUpdatePassword } from "../../Api/sendForgotPasswordRequest";
+import { sendForgotPasswordRequest } from "../../Api/sendForgotPasswordRequest";
 import { ConfirmPassword, Email, NewPassword, Otp, otp, Password, Verfi } from "../../Components/Constant/LoginConatant";
 import { Check, Placeholder } from "../../Components/Constant/Validation";
 

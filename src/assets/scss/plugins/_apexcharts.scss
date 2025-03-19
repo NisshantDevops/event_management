@@ -870,10 +870,9 @@
             clip-path: polygon(50% 2%, 100% 0, 100% 100%, 0 100%, 0 0);
         }
     }
-}
-
-.apexcharts-grid-borders {
-    line {
-        stroke: var(--#{$prefix}border-color);
+    .apexcharts-grid-borders {
+        line {
+            stroke: var(--#{$prefix}border-color);
+        }
     }
 }

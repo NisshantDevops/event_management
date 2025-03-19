@@ -1,3 +1,3 @@
 export const Login = "login"
-export const ForgotPassword = "verifyEmail"
+export const ForgetPassword = "verifyEmail"
 export const UpdatePassword = "updatePassword"

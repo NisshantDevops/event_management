@@ -208,7 +208,7 @@
     }
 
     .noUi-handle{
-      background: $value;
+      background: $value !important;
     }
 
     &[data-slider-style="border"], &[data-slider-style="square"]{

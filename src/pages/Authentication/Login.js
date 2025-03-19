@@ -16,6 +16,7 @@ import { StatusMessage } from "../../Components/Constant/Common";
 import { Validation, Placeholder, Check, handleForgotPasswordClick } from "../../Components/Constant/Validation";
 import { Email, Password, PageTitle } from "../../Components/Constant/LoginConatant";
 import { Texts } from "../../Components/Constant/Common";
+import Header from "../../Layout/Header";
 
 
 const Login = () => {
@@ -41,7 +42,7 @@ const Login = () => {
       try {
         const response = await login(values.email, values.password);
 
-        if (StatusMessage(response.StatusCodes)) {
+        if (StatusMessage(response.StatusCode)) {
           toast.success(response.message);
 
           localStorage.setItem("token", response.token);
@@ -52,7 +53,7 @@ const Login = () => {
           }, 1500);
         } else {
           if (response?.message) {
-            toast.error(response.message);
+            toast.error(response.data);
           }
           setLoading(false);
         }
@@ -121,6 +122,7 @@ const Login = () => {
                         </div>
 
                         <div className="mt-4">
+                    
                           <BaseButton
                             color="success"
                             className="w-100"
@@ -130,6 +132,7 @@ const Login = () => {
                           >
                             {Texts.SIGNIN_IN}
                           </BaseButton>
+                         
                         </div>
                       </Form>
                     </div>

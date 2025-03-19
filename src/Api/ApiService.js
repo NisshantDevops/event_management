@@ -6,8 +6,6 @@ export const API_BASE_URL= process.env.REACT_APP_BASE_URL;
 const ApiService = {
   async request(endpoint, method, body = null) {
     try {
-      
-
       const headers = {
         "Content-Type": "application/json",
         ...(token && { Authorization: `Bearer ${token}` }), 

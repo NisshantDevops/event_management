@@ -11,3 +11,7 @@ export const token=localStorage.getItem('token');
     EnterEmail:"Enter your email to receive reset instructions.",
     ResetPassword:"Reset Password"
 };
+export const DropDown={
+Profile:"profile",
+ChangePassword:"change password",
+Logout:"logout"};
